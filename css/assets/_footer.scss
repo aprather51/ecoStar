@@ -1,0 +1,173 @@
+/* Footer */
+
+footer {
+	background-color: $blue2;
+	color: $white;
+	padding: 40px 0;
+	.logo {
+		width: 120px;
+		margin: 0 auto;
+	}
+	p {
+		font-size: 18px;
+		padding: 20px 0;
+	}
+	a {
+		color: $white;
+		font-weight: 100;
+	}
+	.social-media {
+		p {
+			font-weight: 500;
+		}
+		.sm-content {
+			display: flex;
+			img {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+	.subscribe {
+		padding: 20px 0;
+		p {
+			font-weight: 500;
+		}
+		.input-content {
+			display: flex;
+			position: relative;
+			input {
+				background-color: $blue1;
+				color: $white;
+				border-radius: 100px 0 0 100px;
+				margin: 0;
+				width: 80%;
+				&::placeholder {
+					color: $blueFonts;
+				}
+			}
+			button {
+				position: absolute;
+				right: 0;
+				top: 0;
+				margin: 0;
+				width: 40%;
+				font-size: 16px;
+				font-weight: bold;
+				&:hover {
+					background-color: $white;
+					color: $orange;
+				}
+			}
+		}
+	}
+
+	.col-2 {
+		figure {
+			color: $blueFonts;
+			font-size: 20px;
+			font-weight: 700;
+			margin-left: 0;
+		}
+		.list-content,
+		.contact-content {
+			padding: 10px 0;
+		}
+		.lists {
+			width: 75%;
+			margin: 0 auto;
+			padding-bottom: 10px;
+			ul {
+				padding-left: 0;
+				li {
+					padding: 2px 0;
+					font-size: 16px;
+				}
+			}
+			span {
+				color: $blueFonts;
+				font-weight: 700;
+			}
+		}
+		.contact-content {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+		}
+		.contact {
+			width: 50%;
+			margin: 0 auto;
+			text-align: center;
+			figure {
+				width: 100%;
+				margin: 10px 0;
+			}
+			p,
+			a {
+				padding: 0;
+				margin: 0;
+			}
+			a {
+				display: block;
+				font-size: 14px;
+			}
+			p {
+				font-size: 16px;
+			}
+		}
+	}
+	.base {
+		.link {
+			display: none;
+		}
+		.copyright {
+			font-size: 12px;
+			text-align: center;
+			span {
+				color: $orange;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+//Desktop Screen
+@media screen and (min-width: 1000px) {
+	footer {
+		.footer-grid {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+		}
+		.list-content {
+			display: flex;
+			width: 70%;
+			margin: 0 auto;
+		}
+		.col-2 {
+			.contact {
+				a,
+				p {
+					font-size: 16px;
+				}
+			}
+
+			.contact-content {
+				width: 50%;
+				margin: 0 auto;
+			}
+		}
+		.base {
+			.link {
+				display: block;
+				width: 40%;
+				margin: 0 auto;
+				padding-top: 20px;
+				font-size: 14px;
+				text-align: center;
+				a {
+					color: $blueFonts;
+				}
+			}
+		}
+	}
+}

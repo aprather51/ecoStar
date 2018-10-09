@@ -1,0 +1,172 @@
+/* Mobile Nav Menu */
+#menu-icon {
+	position: fixed;
+	top: 0px;
+	right: 50px;
+	width: 10px;
+	height: 50px;
+	display: block;
+	transition: top 0.3s;
+	.menu-svg-wrap {
+		background-color: $orange;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 45px;
+		height: 45px;
+		padding: 10px;
+		border-radius: 500px;
+	}
+}
+
+#side-menu {
+	display: block;
+	background-color: $orange;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	padding-top: 100px;
+	overflow: hidden;
+	transform: translate3d(-100vw, 0, 0);
+	transition: transform .3s cubic-bezier(0, 0.52, 0, 1);
+	z-index: 1;
+	&.show {
+		transform: translate3d(0vw, 0, 0);
+	}
+	.x-close-menu {
+		position: absolute;
+		top: -20px;
+		right: 30px;
+		font-size: 60px;
+		font-weight: 100;
+	}
+	a {
+		text-align: center;
+		display: block;
+		color: $white;
+		font-size: 22px;
+		padding: 10px 0;
+		svg {
+			stroke: $white;
+		}
+	}
+	#btn-consult {
+		background-color: $blue1;
+		color: $white;
+		width: 50%;
+		margin: 0 auto;
+		margin-top: 30px;
+		padding: .5;
+		border-radius: 4px;
+		&:focus {
+			background-color: $orange;
+			color: $white;
+			border: 2px solid $white;
+		}
+	}
+}
+
+/* Header */
+header {
+	background-color: $bgColor;
+	background-image: url('../assets/heading-bg@2x.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: $white;
+	height: 100vh;
+	min-height: 600px;
+	overflow-y: hidden;
+	justify-content: center;
+	align-items: center;
+	nav {
+		display: flex;
+	}
+	.nav-link {
+		display: none;
+	}
+	.logo {
+		padding-top: 10px;
+		width: 100px;
+		margin: 0 auto;
+	}
+	h1 {
+		text-align: center;
+	}
+	#head-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 80%;
+	}
+}
+
+/*** Desktop Screen ***/
+@media screen and (min-width: 1000px) {
+	/* Mobile Menu */
+	#side-menu {
+		display: none;
+	}
+
+	#menu-icon {
+		display: none;
+	}
+
+	/* Header */
+	body header {
+		nav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 0 auto;
+			padding-top: 1em;
+			.logo {
+				align-items: flex-start;
+				margin: 0;
+				padding-top: 0;
+				width: 120px;
+			}
+		}
+		.nav-link {
+			display: block;
+			align-items: flex-end;
+			a {
+				color: $white;
+				margin: 0 10px;
+				&:hover {
+					color: $orange2;
+				}
+			}
+			#btn-consult {
+				background-color: $white;
+				color: $orange;
+				padding: .5em 1em;
+				border-radius: 100px;
+				transition: .2s;
+				&:hover {
+					background-color: $orange;
+					color: $white;
+				}
+			}
+		}
+		#head-content {
+			justify-content: start;
+			padding: 7%;
+			.content {
+				width: 50%;
+				margin-left: 0;
+			}
+		}
+		h1 {
+			font-size: 60px;
+			font-weight: 500;
+			text-align: left;
+		}
+		.btn {
+			width: 40%;
+			margin: 0;
+		}
+	}
+}
